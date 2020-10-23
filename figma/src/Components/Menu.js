@@ -3,12 +3,12 @@ import './Menu.css';
 
 function Menu() {
     return(
-        <div className="menuArea">
-            <div className="menuTitulo"> Nome da loja </div>
-            <div className="botoesArea">
-                <div href={`/`} className="menuBotoes">Pedidos</div>
-                <div href={`/`} className="menuBotoes">Produtos</div>
-                <div href={`/`} className="menuBotoes">Clientes</div>
+        <div className="menu-area">
+            <div className="menu-titulo"> Nome da loja </div>
+            <div className="botoes-area">
+                <div href={`/`} className="menu-botao">Pedidos</div>
+                <div href={`/`} className="menu-botao">Produtos</div>
+                <div href={`/`} className="menu-botao">Clientes</div>
             </div>
         </div>
     );
