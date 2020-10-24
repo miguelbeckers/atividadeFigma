@@ -1,7 +1,7 @@
 import React from 'react';
 import './Lista.css';
 
-function Lista() {
+export default({itens}) => {
     return(
         <div className="lista-area">
             <div className="lista-cabecalho">
@@ -9,82 +9,11 @@ function Lista() {
                 <div className="lista-botao">+</div>
             </div>
             <div className="lista-pesquisa">Pesquisar</div>
-
+            <div>{typeof itens}</div>
             <div className="lista-produto">
-                <div className="lista-produto-descricao">Descricao do Produto</div>
-                <div className="lista-produto-preco">preco: R$ 1.234,50</div>
+                <div className="lista-produto-descricao">teste</div>
+                <div className="lista-produto-preco">{`preco: R$`}</div>
             </div>
-            <div className="lista-produto">
-                <div className="lista-produto-descricao">Descricao do Produto</div>
-                <div className="lista-produto-preco">preco: R$ 1.234,50</div>
-            </div>
-            <div className="lista-produto">
-                <div className="lista-produto-descricao">Descricao do Produto</div>
-                <div className="lista-produto-preco">preco: R$ 1.234,50</div>
-            </div>
-            <div className="lista-produto">
-                <div className="lista-produto-descricao">Descricao do Produto</div>
-                <div className="lista-produto-preco">preco: R$ 1.234,50</div>
-            </div>
-            <div className="lista-produto">
-                <div className="lista-produto-descricao">Descricao do Produto</div>
-                <div className="lista-produto-preco">preco: R$ 1.234,50</div>
-            </div>
-            <div className="lista-produto">
-                <div className="lista-produto-descricao">Descricao do Produto</div>
-                <div className="lista-produto-preco">preco: R$ 1.234,50</div>
-            </div>
-            <div className="lista-produto">
-                <div className="lista-produto-descricao">Descricao do Produto</div>
-                <div className="lista-produto-preco">preco: R$ 1.234,50</div>
-            </div>
-            <div className="lista-produto">
-                <div className="lista-produto-descricao">Descricao do Produto</div>
-                <div className="lista-produto-preco">preco: R$ 1.234,50</div>
-            </div>
-            <div className="lista-produto">
-                <div className="lista-produto-descricao">Descricao do Produto</div>
-                <div className="lista-produto-preco">preco: R$ 1.234,50</div>
-            </div>
-            <div className="lista-produto">
-                <div className="lista-produto-descricao">Descricao do Produto</div>
-                <div className="lista-produto-preco">preco: R$ 1.234,50</div>
-            </div>
-            <div className="lista-produto">
-                <div className="lista-produto-descricao">Descricao do Produto</div>
-                <div className="lista-produto-preco">preco: R$ 1.234,50</div>
-            </div>
-            <div className="lista-produto">
-                <div className="lista-produto-descricao">Descricao do Produto</div>
-                <div className="lista-produto-preco">preco: R$ 1.234,50</div>
-            </div>
-            <div className="lista-produto">
-                <div className="lista-produto-descricao">Descricao do Produto</div>
-                <div className="lista-produto-preco">preco: R$ 1.234,50</div>
-            </div>
-            <div className="lista-produto">
-                <div className="lista-produto-descricao">Descricao do Produto</div>
-                <div className="lista-produto-preco">preco: R$ 1.234,50</div>
-            </div>
-            <div className="lista-produto">
-                <div className="lista-produto-descricao">Descricao do Produto</div>
-                <div className="lista-produto-preco">preco: R$ 1.234,50</div>
-            </div>
-            <div className="lista-produto">
-                <div className="lista-produto-descricao">Descricao do Produto</div>
-                <div className="lista-produto-preco">preco: R$ 1.234,50</div>
-            </div>
-            <div className="lista-produto">
-                <div className="lista-produto-descricao">Descricao do Produto</div>
-                <div className="lista-produto-preco">preco: R$ 1.234,50</div>
-            </div>
-            <div className="lista-produto">
-                <div className="lista-produto-descricao">Descricao do Produto</div>
-                <div className="lista-produto-preco">preco: R$ 1.234,50</div>
-            </div>
-
         </div>
     );
 }
-
-export default Lista;
