@@ -1,6 +1,7 @@
 import React from 'react';
 import Menu from './Components/Menu';
 import Lista from './Components/Lista';
+import Dados from './Dados';
 
 function App(){
   return(
