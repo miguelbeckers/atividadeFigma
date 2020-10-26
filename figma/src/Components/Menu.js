@@ -1,17 +1,20 @@
 import React from 'react';
+import App from '../App';
 import './Menu.css';
 
-function Menu() {
+function cmd_click(opcao){
+    App.opcao = opcao;
+}
+
+export default() => {
     return(
         <div className="menu-area">
-            <div className="menu-titulo"> Nome da loja </div>
+            <div className="menu-titulo"> Loja </div>
             <div className="botoes-area">
-                <div href={`/`} className="menu-botao">Pedidos</div>
-                <div href={`/`} className="menu-botao">Produtos</div>
-                <div href={`/`} className="menu-botao">Clientes</div>
+                <div onClick={cmd_click(1)} className="menu-botao">Pedidos</div>
+                <div onClick={cmd_click(2)} className="menu-botao">Produtos</div>
+                <div onClick={cmd_click(3)} className="menu-botao">Clientes</div>
             </div>
         </div>
     );
 }
-
-export default Menu;

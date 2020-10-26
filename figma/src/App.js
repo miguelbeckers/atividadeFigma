@@ -1,12 +1,34 @@
 import React from 'react';
 import Menu from './Components/Menu';
 import Lista from './Components/Lista';
-import Dados from './Dados';
+import Cabecalho from './Components/Cabecalho';
+import CriarEditarCliente from './Components/CriarEditarCliente';
+import CriarEditarProduto from './Components/CriarEditarProduto';
+import CriarPedido from './Components/CriarPedido';
 
 export default () => {
-  let listaProdutos = Dados.getProdutos();
   
-  let teste = [
+  let opcao = 1;
+
+  let clientes = [
+    {
+      nome: "Silvio Santos",
+      aniversario: "12 de dezembro",
+      produtos: []
+    },
+    {
+      nome: "Augusto Liberato",
+      aniversario: "10 de abril",
+      produtos: []
+    },
+    {
+      nome: "Xuxa Menegel",
+      aniversario: "27 de março",
+      produtos: []
+    }
+  ]
+
+  let produtos = [
     {
       descricao: "tenis adidas",
       preco: 1234,
@@ -21,12 +43,57 @@ export default () => {
     }
   ]
 
-  console.log(teste.length);
+  let pedidos = [
+    {
+      cliente: clientes[1],
+      produto: [
+        produtos[1],
+        produtos[2]
+      ]
+    },
+    {
+      cliente: clientes[0],
+      produto: [
+        produtos[0],
+        produtos[1],
+        produtos[2]
+      ]
+    }
+  ]
 
-  return(
-    <div>
-      <Menu />
-      <Lista items={teste}/>
-    </div>
-  );
+  if(opcao == 1){  
+    return(
+      <div>
+        <CriarEditarCliente />
+      </div>
+    );
+  }
+
+  else if(opcao == 2){
+    return(
+      <div>
+        <Menu />
+        <Cabecalho titulo={"Produtos"}/>
+        <section className="lista-area">
+          {produtos.map((i, key)=>(
+            <Lista key={key} info1={i.descricao} info2={"Preço R$: "} info3={i.preco}/>
+          ))}
+        </section>
+      </div>
+    );
+  }
+
+  else{
+    return(
+      <div>
+        <Menu />
+        <Cabecalho titulo={"Clientes"}/>
+        <section className="lista-area">
+          {clientes.map((i, key)=>(
+            <Lista key={key} info1={i.nome} info2={"Aniversario dia "} info3={i.aniversario}/>
+          ))}
+        </section>
+      </div>
+    );
+  }
 }

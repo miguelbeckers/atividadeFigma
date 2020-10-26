@@ -1,18 +1,12 @@
 import React from 'react';
 import './Lista.css';
 
-export default({itens}) => {
+export default({info1 ,info2, info3}) => {
     return(
-        <div className="lista-area">
-            <div className="lista-cabecalho">
-                <div className="lista-titulo">Produtos</div>
-                <div className="lista-botao">+</div>
-            </div>
-            <div className="lista-pesquisa">Pesquisar</div>
-            <div>{typeof itens}</div>
-            <div className="lista-produto">
-                <div className="lista-produto-descricao">teste</div>
-                <div className="lista-produto-preco">{`preco: R$`}</div>
+        <div>
+            <div className="lista-item">
+                <div className="lista-item-info1">{info1}</div>
+                <div className="lista-item-info2">{info2} {info3}</div>
             </div>
         </div>
     );
