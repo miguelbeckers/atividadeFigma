@@ -11,9 +11,9 @@ export default() => {
         <div className="menu-area">
             <div className="menu-titulo"> Loja </div>
             <div className="botoes-area">
-                <div onClick={cmd_click(1)} className="menu-botao">Pedidos</div>
-                <div onClick={cmd_click(2)} className="menu-botao">Produtos</div>
-                <div onClick={cmd_click(3)} className="menu-botao">Clientes</div>
+                <div onClick={cmd_click(1)} href={`/App`} className="menu-botao">Pedidos</div>
+                <div onClick={cmd_click(2)} href={`/App`} className="menu-botao">Produtos</div>
+                <div onClick={cmd_click(3)} href={`/App`} className="menu-botao">Clientes</div>
             </div>
         </div>
     );

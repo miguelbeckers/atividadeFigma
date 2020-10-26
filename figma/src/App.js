@@ -8,7 +8,7 @@ import CriarPedido from './Components/CriarPedido';
 
 export default () => {
   
-  let opcao = 1;
+  let opcao = 6;
 
   let clientes = [
     {
@@ -61,10 +61,17 @@ export default () => {
     }
   ]
 
+  
   if(opcao == 1){  
     return(
       <div>
-        <CriarEditarCliente />
+        <Menu />
+        <Cabecalho titulo={"Pedidos"}/>
+        <section className="lista-area">
+          {pedidos.map((i, key)=>(
+            <Lista key={key} info1={i.cliente.nome} info2={i.produto.length} info3={" produtos"}/>
+          ))}
+        </section>
       </div>
     );
   }
@@ -83,7 +90,7 @@ export default () => {
     );
   }
 
-  else{
+  else if(opcao == 3){
     return(
       <div>
         <Menu />
@@ -93,6 +100,51 @@ export default () => {
             <Lista key={key} info1={i.nome} info2={"Aniversario dia "} info3={i.aniversario}/>
           ))}
         </section>
+      </div>
+    );
+  }
+
+  else if(opcao == 4){  
+    return(
+      <div>
+        <Menu />
+        <Cabecalho titulo={"Pedidos"}/>
+        <section className="lista-area">
+          {pedidos.map((i, key)=>(
+            <Lista key={key} info1={i.cliente.nome} info2={i.produto.length} info3={" produtos"}/>
+          ))}
+        </section>
+        <CriarEditarCliente />
+      </div>
+    );
+  }
+
+  else if(opcao == 5){  
+    return(
+      <div>
+        <Menu />
+        <Cabecalho titulo={"Pedidos"}/>
+        <section className="lista-area">
+          {pedidos.map((i, key)=>(
+            <Lista key={key} info1={i.cliente.nome} info2={i.produto.length} info3={" produtos"}/>
+          ))}
+        </section>
+        <CriarEditarProduto />
+      </div>
+    );
+  }
+
+  else if(opcao == 6){  
+    return(
+      <div>
+        <Menu />
+        <Cabecalho titulo={"Pedidos"}/>
+        <section className="lista-area">
+          {pedidos.map((i, key)=>(
+            <Lista key={key} info1={i.cliente.nome} info2={i.produto.length} info3={" produtos"}/>
+          ))}
+        </section>
+        <CriarPedido />
       </div>
     );
   }

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&display=swap');
+
+
+.fundo{
+    background-color: black;
+    opacity: 0.8;
+    background-blend-mode: multiply;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.contentor{
+    position: fixed;
+    width: 120vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.caixa{
+    background-color: white;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
+    width: 600px;
+    height: 221px;
+    padding: 20px;
+}
+.linha-titulo,
+.linha-botao,
+.linha{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.linha-titulo{
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+.linha-botao{
+    margin-top: 45px;
+}
+
+.fechar,
+.botao-salvar,
+.info-criacao,
+.titulo-campo,
+.titulo{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    font-style: normal;
+}
+
+.titulo-campo{
+    font-weight: 400;
+}
+.info-criacao{
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.entrada{
+    width: 260px;
+    height: 30px;
+    border-radius: 4px;
+    background: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.fechar,
+.botao-salvar{
+    font-weight: 400;
+    color: white;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.botao-salvar{
+    width: 100px;
+    height: 30px;
+    background-color: #7D3CCF;
+    border-radius: 4px;
+}
+
+.fechar{
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    font-style: bold;
+    font-weight: 600;
+}
